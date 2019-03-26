@@ -41,6 +41,8 @@ The web application displays a scatter plot when given a gene expression file.
 The scatter plots displays gene correlations.The X-axis is the expression level of G1 and Y-axis is the expression level of  G2.We use different colors to represent different experiments under different conditions.If the expression level of G2 increases with the increase of the expression level of G1, it means that G1 promotes the expression of G2; if it decreases, it inhibits the expression of G2.If the distribution of points of the same color is dense and the correlation coefficient is high, it means that the two genes are highly correlated; if the distribution of points of the same color is scattered, it means that their correlation is low.When our mouse touches some of these dots, we can get the  related information of the dot.
 Our scatter plot model is as follows : 
 
+.. image:: /source/spot.png
+
 3. Non-functional Requirements
 -------------------------------
 3.1. Response Time
@@ -79,7 +81,7 @@ System downtime should be less than 30 minutes per year for a better user experi
 ----------------------
 (1)	In the future, other types of files can be supported as input. Such as excel files.
 (2)	The application could generate an analysis result document and support download.
-(3)	For some files with large amount of data, the program needs a long processing time. So it¡¯s critical for us to make the response time of browser shorter. 
+(3)	For some files with large amount of data, the program needs a long processing time. So itÂ¡Â¯s critical for us to make the response time of browser shorter. 
 (4)	More functions will be provided from the application.
 
 6. Milestones
