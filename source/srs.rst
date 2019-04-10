@@ -22,7 +22,7 @@ The remainder of the document is organized as follows: first, we introduce the o
                               
  * web maintainers: Computer technicians skilled in python and github.
  
- 1.3.2. Product Features
+1.3.2. Product Features
 ****************************
  
  The web application has a simple homepage with two buttons [Upload] and [Reset]. Our scientists upload two sample files of the expression levels of two genes G1 and G2 and the details of their conditions. Accepting these files, the software will return a scatter plot of gene expression correlation whose X-axis is G1 and Y-axis is G2. If an invalid file is given, the web application returns a page informing the user to provide the correct format.
