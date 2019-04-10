@@ -48,24 +48,40 @@ A valid submitted gene expression file has the following format :
 2.2. Output
 ---------------------------
 
+2.2.1. Requirements Analyzing
+*******************************
+
 The web application displays a scatter plot when given gene expression files.
 
-+------------------------+-----------------------+----------+
-|          RQ            |     RA                | PRIORITY |
-+========================+=======================+==========+
-|The plots are sorted by |It is convenient for   |          |
-|color. The different    |users to observe the   |          |
-|tissue is indicated by  |correlation between the|    H     |                      
-|different coloration.   |expression levels of   |          |
-|                        |two genes within the   |          |
-|                        |same tissue.           |          |
-+------------------------+-----------------------+----------+
-|The details of the point|Users can view the     |          |
-|where the mouse is      |experimental conditions|    H     |   
-|located can be displayed|of the two genes       |          |
-+------------------------+-----------------------+----------+
++------+------------------------+-----------------------+----------+
+|NUM   |          RQ            |     RA                | PRIORITY |
++======+========================+=======================+==========+
+|1     |The dots are sorted by  |It is convenient for   |          |
+|      |color. The different    |users to observe the   |          |
+|      |tissue is indicated by  |correlation between the|    H     |                      
+|      |different coloration.   |expression levels of   |          |
+|      |                        |two genes within the   |          |
+|      |                        |same tissue.           |          |
++------+------------------------+-----------------------+----------+
+|2     |The details of the point|Users can view the     |          |
+|      |where the mouse is      |experimental conditions|    H     |   
+|      |located can be displayed|of the two genes       |          |
++------+------------------------+-----------------------+----------+
+|3     |Calculate the           |Users can more         |          |
+|      |correlation coefficient |intuitively determine  |    H     |
+|      |of each tissue.         |the correlation between|          |
+|      |                        |two gene.              |          |
++------+------------------------+-----------------------+----------+
+|4     |If the user submits     |This reminds the user  |          |
+|      |an invalid file,        |that the uploaded file |    M     |
+|      |program will return an  |is invalid.            |          |
+|      |error message.          |                       |          |
++------+------------------------+-----------------------+----------+
 
-The scatter plots displays gene correlations.The X-axis is the expression level of G1 and Y-axis is the expression level of  G2.We use different colors to represent different experiments under different conditions.If the expression level of G2 increases with the increase of the expression level of G1, it means that G1 promotes the expression of G2; if it decreases, it inhibits the expression of G2.If the distribution of points of the same color is dense and the correlation coefficient is high, it means that the two genes are highly correlated; if the distribution of points of the same color is scattered, it means that their correlation is low.When our mouse touches some of these dots, we can get the  related information of the dot.
+2.2.2.  Plot Analyzing 
+***********************
+
+If the expression level of G2 increases with the increase of the expression level of G1, it means that G1 promotes the expression of G2; if it decreases, it inhibits the expression of G2.If the distribution of points of the same color is dense and the correlation coefficient is high, it means that the two genes are highly correlated; if the distribution of points of the same color is scattered, it means that their correlation is low.
 
 Our scatter plot model is as follows : 
 
