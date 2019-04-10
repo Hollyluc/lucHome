@@ -10,23 +10,36 @@ Generate a scatter plot based on two gene expression level samples to observe th
 
 1.2. Overview
 -------------
-The web application has a simple homepage with a single button [Upload]. Our scientists upload a plain json file containing gene expression levels from two samples G1, G2 and the level of gene expression of Arabidopsis  thaliana under different conditions, representing three experimental conditions. Accepting these files, the software will return a scatter plot of gene expression correlation whose X-axis is G1 and Y-axis is G2. If an invalid gene expression is given, the web application returns a page informing the user to provide the correct format.
+The remainder of the document is organized as follows: first, we introduce the overall description. Then we analyze the product requirements. Finally, we analyze the constrains and some change cases of the software.
 
-1.3. User Characteristics   
--------------------------                                                                                                         
+1.3. Overall Description   
+------------------------- 
+
+1.3.1. User Characteristics 
+****************************
+
  * clients: Biologists who are using web application to processing experimental data.  
                               
  * web maintainers: Computer technicians skilled in python and github.
+ 
+ 1.3.2. Product Features
+ ************************
+ 
+ The web application has a simple homepage with two buttons [Upload] and [Reset]. Our scientists upload two sample files of the expression levels of two genes G1 and G2 and the details of their conditions. Accepting these files, the software will return a scatter plot of gene expression correlation whose X-axis is G1 and Y-axis is G2. If an invalid file is given, the web application returns a page informing the user to provide the correct format.
 
 1.4. Terminologies
 ------------------
 In order to introduce the project and specify the requirements in detail, this section will explain some terminologies so that the clients and maintainers have better understanding of the content of the project.
-JavaScript Object Notation(json)- A lightweight data interchange format based on the JavaScript language .
+ *JavaScript Object Notation(json)* - A lightweight data interchange format based on the JavaScript language .
 
+ *Invalid file* - The document type is not json and the contents of the files can not represent the level of gene expression.
+ 
 2. Functional Requirements
 ---------------------------
+
 2.1. Input
 ------------------
+
 A valid submitted gene expression file has the following format :
   * Users have to submit three json files.
   * For the file format, the file have to be json file.
@@ -34,10 +47,12 @@ A valid submitted gene expression file has the following format :
 
 2.2. Output(Data Analyzing)
 ---------------------------
+
 The web application displays a scatter plot when given a gene expression file.
 
 2.2.1. Plot Analyzing
 ---------------------
+
 The scatter plots displays gene correlations.The X-axis is the expression level of G1 and Y-axis is the expression level of  G2.We use different colors to represent different experiments under different conditions.If the expression level of G2 increases with the increase of the expression level of G1, it means that G1 promotes the expression of G2; if it decreases, it inhibits the expression of G2.If the distribution of points of the same color is dense and the correlation coefficient is high, it means that the two genes are highly correlated; if the distribution of points of the same color is scattered, it means that their correlation is low.When our mouse touches some of these dots, we can get the  related information of the dot.
 
 Our scatter plot model is as follows : 
