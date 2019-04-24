@@ -100,7 +100,7 @@ Because the scatter plot will display many spots, the interface should be as sim
 
 3.3. Confidentiality Policy
 ---------------------------
-This project is a public web application, it is important to ensure data security. Especially for some biologist, they attach great importance to experimental data. So this application must keep experimental data confidential and the data must not be allowed to read without agreement of the owner.
+This application is mainly used by biologists. We must ensure the safety of experimental data before they officially announce the results of experiments. Therefore, after users use the application, the program will delete their experimental data files.
 
 4. Constraints
 ----------------------
@@ -117,10 +117,6 @@ The spatial complexity of a program is the amount of memory needed to run a prog
 4.3. Budget
 ----------------------
 Budget less than 10,000 USD.
-
-4.4. System Downtime
-----------------------
-System downtime should be less than 30 minutes per year for a better user experience.
 
 5. Change Cases
 ----------------------
