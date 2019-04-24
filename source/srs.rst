@@ -41,7 +41,7 @@ In order to introduce the project and specify the requirements in detail, this s
 ------------------
 
 A valid submitted gene expression file has the following format :
-  * Users have to submit three json files.
+  * Users have to submit three files.
   * For the file format, the file have to be json file.
   * The file should contain the condition of gene and gene expreession level value for each group condition. (e.g."R0001000014601":1.38128181929635). The condition names in both files must match. The details of the condition should be included in the information file.
 
